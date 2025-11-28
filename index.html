@@ -1,96 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
 <title>USDT.z – Tether USD Bridged ZED20</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
+  background: #0d1117;
+  color: #e6edf3;
   font-family: Arial, sans-serif;
-  background: #f8f9fa;
-  color: #222;
+  margin: 0;
+  padding: 0;
   text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #161b22;
   padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.45);
 }
-.card {
-  max-width: 520px;
-  margin: auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.08);
-}
+
 .logo {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  border: 2px solid #30363d;
   margin-bottom: 20px;
-  border: 2px solid #ddd;
 }
-button {
-  background: #1e88e5;
-  border: none;
-  padding: 12px 22px;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 12px;
+
+h1 {
+  margin-top: 0;
+  font-size: 26px;
+  color: #58a6ff;
 }
-button:hover {
-  opacity: 0.85;
-}
-.links a {
-  display: block;
-  margin-top: 10px;
-  color: #1e88e5;
+
+a {
+  color: #58a6ff;
   text-decoration: none;
   font-size: 15px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.list a {
+  display: block;
+  margin-top: 12px;
+}
+
+.contract-box {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-size: 14px;
+  word-break: break-all;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
-  <img src="logo.png" alt="USDT.z Logo" class="logo" />
+<div class="container">
 
-  <h2>Tether USD Bridged ZED20 (USDT.z)</h2>
+  <img src="logo.png" class="logo" alt="USDT.z">
+
+  <h1>Tether USD Bridged ZED20 (USDT.z)</h1>
+
   <p>Stable pegged token on BNB Smart Chain — 1 USDT.z ≈ 1 USD</p>
 
-  <h3>Contract (BEP20):</h3>
-  <p><b>0x84337E0A1963893125fa4EC4c71C95288d209650</b></p>
+  <div class="contract-box">
+    <b>Contract:</b><br>
+    0x84337E0A1963893125fa4EC4c71C95288d209650
+  </div>
 
-  <button onclick="addToMetaMask()">Add to MetaMask</button>
-
-  <div class="links">
+  <div class="list">
     <a href="https://bscscan.com/token/0x84337E0A1963893125fa4EC4c71C95288d209650" target="_blank">View on BscScan</a>
     <a href="https://t.me/USDT_sup1" target="_blank">Telegram Support</a>
     <a href="https://x.com/bridge_USDTZ" target="_blank">Twitter</a>
     <a href="mailto:bridgeusdttether@gmail.com">Email Support</a>
   </div>
-</div>
 
-<script>
-async function addToMetaMask() {
-  try {
-    await window.ethereum.request({
-      method: "wallet_watchAsset",
-      params: {
-        type: "ERC20",
-        options: {
-          address: "0x84337E0A1963893125fa4EC4c71C95288d209650",
-          symbol: "USDT.z",
-          decimals: 18,
-          image: "https://yalman1370.github.io/usdtz-website/logo.png"
-        }
-      }
-    });
-  } catch (error) {
-    alert("MetaMask error: " + error.message);
-  }
-}
-</script>
+</div>
 
 </body>
 </html>
